@@ -50,15 +50,17 @@ export default function News(props) {
                 loader={<Spine />}
             >
                 <div className="row">
-                    {articles && articles.map((e, index) => (
+                    {articles && articles.length > 0 && articles.map((e, index) => (
+
                         <div className="col-md-4" key={index}>
                             <Newsitem
-                                title={e.title}
-                                description={e.description}
-                                urlToImage={e.urlToImage}
-                                newsurl={e.url}
-                                source={e.source.name}
+                                title={e.title ? e.title : "No Title"}
+                                description={e.description ? e.description : "No Description"}
+                                urlToImage={e.urlToImage ? e.urlToImage : "default-image-url"}
+                                newsurl={e.url ? e.url : "#"}
+                                source={e.source ? e.source.name : "Unknown Source"}
                             />
+
                         </div>
                     ))}
                 </div>
