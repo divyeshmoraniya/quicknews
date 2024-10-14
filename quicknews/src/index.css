@@ -22,3 +22,25 @@ video{
     height: 100px;
     width: 100px;
 }
+/* Apply light and dark modes globally */
+body.light {
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+
+body.dark {
+    background-color: #343a40;
+    color: #f8f9fa;
+}
+
+/* Navbar specific mode styles */
+.navbar-light {
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+
+.navbar-dark {
+    background-color: #343a40;
+    color: #f8f9fa;
+}
+
