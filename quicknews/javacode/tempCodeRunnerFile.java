@@ -1,1 +1,0 @@
-quicknews.javacode
