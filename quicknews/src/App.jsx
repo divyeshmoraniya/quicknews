@@ -8,7 +8,7 @@ export default function App() {
   const [mode, setMode] = useState('light');
   const [progress, setProgress] = useState(0);
 
- 
+  const apikey = "9d4b8772c127454085b200daf7d4c3bd"; 
   useEffect(() => {
     document.body.className = mode;
   }, [mode]);
@@ -28,13 +28,13 @@ export default function App() {
         />
         <Nav mode={mode} toggleMode={toggleMode} />
         <Routes>
-          <Route exact path="/" element={<News setProgress={setProgress} mode={mode} category="general" />} />
-          <Route exact path="/science" element={<News setProgress={setProgress} mode={mode} category="science" />} />
-          <Route exact path="/health" element={<News setProgress={setProgress} mode={mode} category="health" />} />
-          <Route exact path="/general" element={<News setProgress={setProgress} mode={mode} category="general" />} />
-          <Route exact path="/sports" element={<News setProgress={setProgress} mode={mode} category="sports" />} />
-          <Route exact path="/technology" element={<News setProgress={setProgress} mode={mode} category="technology" />} />
-          <Route exact path="/entertainment" element={<News setProgress={setProgress} mode={mode} category="entertainment" />} />
+          <Route exact path="/" element={<News setProgress={setProgress} apikey={apikey} mode={mode} category="general" />} />
+          <Route exact path="/science" element={<News setProgress={setProgress}apikey={apikey} mode={mode} category="science" />} />
+          <Route exact path="/health" element={<News setProgress={setProgress} apikey={apikey}mode={mode} category="health" />} />
+          <Route exact path="/general" element={<News setProgress={setProgress} apikey={apikey}mode={mode} category="general" />} />
+          <Route exact path="/sports" element={<News setProgress={setProgress} apikey={apikey}mode={mode} category="sports" />} />
+          <Route exact path="/technology" element={<News setProgress={setProgress} apikey={apikey}mode={mode} category="technology" />} />
+          <Route exact path="/entertainment" element={<News setProgress={setProgress}apikey={apikey} mode={mode} category="entertainment" />} />
           <Route exact path="/business" element={<News setProgress={setProgress} mode={mode} category="business" />} />
         </Routes>
       </div>
